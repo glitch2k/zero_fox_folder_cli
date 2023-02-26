@@ -1,0 +1,30 @@
+name: dev_workflow
+
+on:
+  push:
+    branches:
+      - "feat_add_default_project_folder"
+
+jobs:
+  full_function_test:
+    runs-on: ubuntu-20.04
+    
+    steps:
+      - name: install git
+        run: apt install -y git
+
+      - name: checkout code from repo
+        uses: action/checkout@v2
+
+      - name: copy content of src to bash cmd path
+        run: |
+          - USERNAME=$(whoami)
+          - CP_DEST=$(echo '/home/${USERNAME}/.local/bin/')
+          - cp -r ./src/ ${CP_DEST}
+
+      - name: make the python file executable
+        run: chmod 755 ${CP_DEST}/project_folder
+
+      - name: step to open vscode in project folder
+        run: echo 'Open vscode in Project Folder'
+
