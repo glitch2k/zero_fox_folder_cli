@@ -17,3 +17,15 @@
 
 - Start a vscode instance from the project folder
 
+## v1.1
+
+Change Log
+  - Project directory can be set with Linux environment variable
+      - PROJ_FOLDER
+        - OR
+      - If not set, the default location will be used:
+        - /home/[user]/Documents/zero_fox_projects/
+          - where [user] is the name of the logged in user
+  - If the program is ran with a project name that already exists, the program will exit and inform the user the following
+    - a project with that name already exist in the main project PROJ_FOLDER
+  - 
