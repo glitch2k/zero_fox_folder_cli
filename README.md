@@ -28,4 +28,3 @@ Change Log
           - where [user] is the name of the logged in user
   - If the program is ran with a project name that already exists, the program will exit and inform the user the following
     - a project with that name already exist in the main project PROJ_FOLDER
-  - 
