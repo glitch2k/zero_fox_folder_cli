@@ -18,7 +18,7 @@ jobs:
         with:
           # Repository name with owner. For example, actions/checkout
           # Default: ${{ github.repository }}
-          repository: ${{ github.repository }}
+          repository: 'git@github.com:glitch2k/zero_fox_folder_cli.git'
 
       - name: copy content of src to bash cmd path
         run: |
