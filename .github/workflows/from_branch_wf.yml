@@ -15,6 +15,10 @@ jobs:
 
       - name: checkout code from repo
         uses: action/checkout@v3
+        with:
+          # Repository name with owner. For example, actions/checkout
+          # Default: ${{ github.repository }}
+          repository: ${{ github.repository }}
 
       - name: copy content of src to bash cmd path
         run: |
